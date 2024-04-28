@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link,  useParams } from "react-router-dom";
 
 
 const Ditaels = () => {
@@ -12,6 +12,9 @@ const Ditaels = () => {
             .then(res => res.json())
             .then(dt => setSingleCart(dt))
     }, [id])
+
+
+
     return (
         <div>
             <div className="hero min-h-[400] bg-base-200">
@@ -23,11 +26,12 @@ const Ditaels = () => {
                         <p>location: {singleCart.location}</p>
                         <p>average_cost: {singleCart.average_cost}</p>
                         <p>seasonality: {singleCart.seasonality}</p>
+
+
                     </div>
                 </div>
             </div>
-            <p className="font-bold text-neutral-700"> <span className="font-bold text-3xl text-fuchsia-600">description:</span>  {singleCart.description}</p>
-
+            <p className="font-bold text-neutral-700 text-2xl"> <span className="font-bold text-3xl text-indigo-600">description:</span>  {singleCart.description}</p>
             <Link to="/Hoome" className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-gray-50 mb-10 mt-8">
                 <span className="absolute left-0 block w-full h-0 transition-all bg-indigo-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
                 <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">

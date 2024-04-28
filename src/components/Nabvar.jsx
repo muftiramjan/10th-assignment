@@ -23,9 +23,9 @@ const Navbar = () => {
                 <NavLink to="/MyList">MyList</NavLink>
               </li>
             }
-            <li><NavLink to="/Services">Services</NavLink></li>
+            <li><NavLink to="/Services">AdededSpots</NavLink></li>
             {
-              user && <li><NavLink to="/AllAdededSpot">AllAdededSpot</NavLink></li>
+              user && <li><NavLink to="/AllAdededSpot">Form</NavLink></li>
             }
             <li>
               {
@@ -47,9 +47,9 @@ const Navbar = () => {
               <NavLink to="/UpdateProfile">Update Profile</NavLink>
             </li>
           }
-          <li><NavLink to="/TouristsSpotForm">SpotForm</NavLink></li>
+          <li><NavLink to="/TouristsSpotForm">AdededSpots</NavLink></li>
           {
-            user && <li><NavLink to="/AllAdededSpot">AllAdededSpot</NavLink></li>
+            user && <li><NavLink to="/AllAdededSpot">Form</NavLink></li>
           }
           {
             user && <li><NavLink to="/MyList">MyList</NavLink></li>
