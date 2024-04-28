@@ -7,11 +7,11 @@ import Register from "../components/Register";
 import Error from "../components/Error"
 import Ditaels from "../components/Book/Ditaels";
 import Praivhetrout from "../components/Praivhetrout"
-import About from "../Paigase/Hoome/About";
 import EditProfile from "../Paigase/Hoome/UpdateProfile/EditProfile";
 import TouristsSpotForm from "../Paigase/Hoome/userprofile/TouristsSpotForm";
 import CurdDitels from "../Paigase/Hoome/userprofile/CurdDitels";
 import MyList from "../components/MyList";
+import AllAdededSpot from "../Paigase/Hoome/AllAdededSpot";
 
 
 
@@ -51,8 +51,8 @@ const Raots= createBrowserRouter([
                
             },
             {
-                path:'/About',
-                element:<Praivhetrout><About></About></Praivhetrout>,
+                path:'/AllAdededSpot',
+                element:<Praivhetrout><AllAdededSpot></AllAdededSpot></Praivhetrout>,
             },
             {
                 path:'/login',

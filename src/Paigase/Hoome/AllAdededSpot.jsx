@@ -1,7 +1,7 @@
 
 import { Helmet } from "react-helmet-async";
 
-const About = () => {
+const AllAdededSpot = () => {
     return (
         <div>
             <Helmet>
@@ -25,4 +25,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default AllAdededSpot;
