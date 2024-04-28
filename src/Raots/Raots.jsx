@@ -74,7 +74,6 @@ const Raots= createBrowserRouter([
             {
                 path:'/book/:id',
                 element: <Praivhetrout><Ditaels></Ditaels> </Praivhetrout>,
-                loader: ()=> fetch('/http://localhost:5000/user')
               }
         ]
     }

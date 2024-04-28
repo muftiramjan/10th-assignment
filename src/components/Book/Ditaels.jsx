@@ -1,48 +1,41 @@
-import { NavLink, useLoaderData, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
-import 'react-toastify/dist/ReactToastify.css';
+
 const Ditaels = () => {
+    const [singleCart, setSingleCart] = useState([])
 
-    const bookData = useLoaderData();
     const { id } = useParams();
-    const idInt = parseInt(id);
-    const currentBook = bookData.find(book => book.id === idInt);
-    console.log(currentBook);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/singleUser/${id}`)
+            .then(res => res.json())
+            .then(dt => setSingleCart(dt))
+    }, [id])
     return (
         <div>
-
-            <div className="w-96 h-100% mx-auto">
-
-            </div>
-
-            <div className="flex gap-x-11">
-
-                <div className="w-full mt-20">
-                    <img className="p-3 rounded" src={currentBook.image} alt="" />
-                    <h1 className=" font-bold text-3xl ">{currentBook.tourists_spot_name}</h1>
-                </div>
-                <div className="space-y-2 mt-11">
-                    <hr />
-                    <p><span className="text-2xl font-bold ">short_description:</span>{currentBook.short_description}</p>
-                    <hr />
-                    <p><span className="text-1xl font-bold mr-10">seasonality:</span>{currentBook.seasonality}</p>
-                    <p><span className="text-1xl font-bold mr-10">average_cost:</span>{currentBook.average_cost}</p>
-                    <p><span className="text-1xl font-bold mr-10">location:</span>{currentBook.location}</p>
-                    <p><span className="text-1xl font-bold mr-10">country_Name:</span>{currentBook.country_Name}</p>
-                    <p><span className="text-1xl font-bold mr-10">travel_time:</span>{currentBook.travel_time}</p>
-                    <p><span className="text-1xl font-bold mr-10">totalVisitorsPerYear:</span>{currentBook.totalVisitorsPerYear}</p>
-                    <p><span className="text-1xl font-bold mr-10">userEmail:</span>{currentBook.userEmail}</p>
-                    <p><span className="text-1xl font-bold mr-10">userName:</span>{currentBook.userName}</p>
-                    <div className="mt-3">
-                        <NavLink to="/Hoome" className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Bac to Home </NavLink>
+            <div className="hero min-h-[400] bg-base-200">
+                <div className="hero-content flex-col lg:flex-row">
+                    <img src={singleCart.image} className="max-w-sm rounded-lg shadow-2xl" />
+                    <div className="space-y-5">
+                        <h1 className="text-5xl font-bold">{singleCart.tourists_spot_name}</h1>
+                        <p>country_Name: {singleCart.country_Name}</p>
+                        <p>location: {singleCart.location}</p>
+                        <p>average_cost: {singleCart.average_cost}</p>
+                        <p>seasonality: {singleCart.seasonality}</p>
                     </div>
-
                 </div>
-
             </div>
+            <p className="font-bold text-neutral-700"> <span className="font-bold text-3xl text-fuchsia-600">description:</span>  {singleCart.description}</p>
+
+            <Link to="/Hoome" className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-gray-50 mb-10 mt-8">
+                <span className="absolute left-0 block w-full h-0 transition-all bg-indigo-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </span>
+                <span className="relative">Back To HoMe</span>
+            </Link>
         </div>
-
-
     );
 };
 
