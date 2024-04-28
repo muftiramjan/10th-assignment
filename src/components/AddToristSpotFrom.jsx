@@ -48,7 +48,8 @@ const AddToristSpotFrom = () => {
         <div>
 
             <div className="">
-                <form onSubmit={HandaleAddCoffe} className=" mx-auto bg-[#F4F3F0] w-1/2 p-8 mb-4">
+                <h1 className='text-center font-bold text-4xl text-green-500'>Adede Form Data here</h1>
+                <form onSubmit={HandaleAddCoffe} className=" mx-auto bg-[#F4F3F0] w-full p-8 mb-4">
                     <div className="flex justify-between space-x-3">
                         <div className=" w-1/2">
                             <p>image</p>
