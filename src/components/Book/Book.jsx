@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Book = ({ book }) => {
   const { _id, image, tourists_spot_name, totalVisitorsPerYear, location, seasonality, country_Name ,short_description} = book;
-  console.log(_id);
+  // console.log(_id);
   return (
     <div data-aos="fade-down"
       data-aos-easing="linear"
