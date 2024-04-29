@@ -21,14 +21,30 @@ useEffect( () =>{
        {
         items.map(item => 
         <div key={item._id} >
-            {item.UserEmail}
-            <p>{item.UserName}</p>
-            <p>{item.UserName}</p>
-            <p>{item.UserName}</p>
-            <p>{item.UserName}</p>
-            <p>{item.UserName}</p>
-            <p>{item.UserName}</p>
-
+            {/* {item.UserEmail} */}
+            <div className="overflow-x-auto">
+  <table className="table table-zebra">
+    {/* head */}
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>email</th>
+        <th>spot</th>
+        <th>update/delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {/* row 1 */}
+      <tr>
+        <th>1</th>
+        <td>Cy Ganderton</td>
+        <td>Quality Control Specialist</td>
+        <td>Blue</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
             </div>)
 
        }
