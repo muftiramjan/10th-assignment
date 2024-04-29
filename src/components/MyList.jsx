@@ -11,7 +11,7 @@ const {user} = useContext(AoutContext) || {} ;
 const [item,setitem]=useState([]);
 console.log(user);
 useEffect( () =>{
-    fetch(`http://localhost:5000/sport/${user?.UserEmail}`)
+    fetch(`http://localhost:5000/sport/${user?.email}`)
     .then(res => res.json())
     .then(data => {
         setitem(data);
@@ -20,10 +20,10 @@ useEffect( () =>{
 
 
     return (
-       <div>
-        <p>user:{user.length}</p>
-        
-       </div>
+    <div>
+        <p>item:{item.length}</p>
+        <p>tourists_spot_name{item.tourists_spot_name}</p>
+    </div>
     );
 };
 
