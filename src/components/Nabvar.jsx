@@ -29,11 +29,7 @@ if(e.target.checked){
           </div>
           <ul tabIndex={0} className="z-50 menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
             <li><NavLink to="/">Home</NavLink> </li>
-            {
-              user && <li>
-                <NavLink to="/UpdateProfile">Update Profile</NavLink>
-              </li>
-            }
+           
             {
               user && <li>
                 <NavLink to="/MyList">MyList</NavLink>
