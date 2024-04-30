@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 
 
 
+  
 
 
 const Hoome = () => {
@@ -13,6 +14,7 @@ const Hoome = () => {
             <Helmet>
                 <title>Home</title>
             </Helmet>
+          
             <Slider></Slider>
             <ResidentialPara></ResidentialPara>
             <Books></Books>

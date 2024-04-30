@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types'
-
+import tippy from 'tippy.js';
+import 'tippy.js/dist/tippy.css';
+import Tippy from "@tippyjs/react";
 const Book = ({ book }) => {
   const { _id, image, tourists_spot_name, totalVisitorsPerYear, location, seasonality, country_Name ,short_description} = book;
   // console.log(_id);
@@ -28,7 +30,12 @@ const Book = ({ book }) => {
                 </span>
                 <span className="relative">View Details</span>
               </Link>
-
+              <div >
+                <Tippy content="i am tooltip">
+             <button className="btn btn-circle"
+             >click me</button>
+             </Tippy>
+              </div>
             </div>
           </div>
         </div>
