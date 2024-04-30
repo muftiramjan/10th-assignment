@@ -44,7 +44,7 @@ const Raots = createBrowserRouter([
             {
                 path: '/TouristsSpotForm',
                 element: <TouristsSpotForm></TouristsSpotForm>,
-                loader: () => fetch('http://localhost:5000/sport')
+                loader: () => fetch('https://my-coffee-shope-server.vercel.app/sport')
             },
             {
                 path: '/CurdDitels/:id',

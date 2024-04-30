@@ -8,7 +8,7 @@ const Ditaels = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleUser/${id}`)
+        fetch(`https://my-coffee-shope-server.vercel.app/singleUser/${id}`)
             .then(res => res.json())
             .then(dt => setSingleCart(dt))
     }, [id])

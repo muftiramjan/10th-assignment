@@ -43,7 +43,7 @@ const CurdDitels = () => {
 
     }
     useEffect( () => {
-        fetch(`http://localhost:5000/Singelspot/${id}`)
+        fetch(`https://my-coffee-shope-server.vercel.app/Singelspot/${id}`)
         .then (res => res.json())
         .then(data => {
             setSpots(data)

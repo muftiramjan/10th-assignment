@@ -21,7 +21,7 @@ const AddToristSpotFrom = () => {
         const newSport = { useimageURL, tourists_spot_name, country_Name, location, shortdescription, average_cost, seasonality, travel_time,totaVisitorsPerYear,UserEmail,UserName};
         console.log(newSport);
         // send data
-        fetch('http://localhost:5000/sport', {
+        fetch('https://my-coffee-shope-server.vercel.app/sport', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

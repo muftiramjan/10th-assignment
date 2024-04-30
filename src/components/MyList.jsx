@@ -17,7 +17,7 @@ const MyList = () => {
     }, [user,control])
 
     const handelDelete = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://my-coffee-shope-server.vercel.app/delete/${id}`,{
             method:"DELETE",
         })
         .then(res => res.json())
