@@ -32,6 +32,8 @@ live link:
 12. Mobile Tablet Laptop Be responsive,
 13. About page has been privatized, -->
 14. adeded form spots
+15. update and delete botton creat ok
+16. 
 <!-- 15. Profile has been updated -->
 <!-- Three packages are used -->
 <!-- 1. [@Aos-package](https://www.npmjs.com/package/aos)I have this package In Joyson Data.
