@@ -33,9 +33,9 @@ live link:
 13. About page has been privatized, -->
 14. adeded form spots
 15. update and delete botton creat ok
-16. 
-<!-- 15. Profile has been updated -->
-<!-- Three packages are used -->
-<!-- 1. [@Aos-package](https://www.npmjs.com/package/aos)I have this package In Joyson Data.
-2. [@Animate-css](https://animate.style/)I have this packag Between the fotter section.
-3. [@Swiper-slider](https://swiperjs.com/)I have this package In the middle of the banner section. --> -->
+16. revel used in paragraf
+17. tooltip use botoon 
+
+<!-- Two packages are used -->
+ 1. [@revel-package](https://www.npmjs.com/package/react-awesome-reveal)I have this package In Joyson Data. 
+2. [@tooltip](https://react-tooltip.com/)I have this packag Between the fotter section.

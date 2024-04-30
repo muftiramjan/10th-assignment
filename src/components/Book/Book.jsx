@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types'
-import tippy from 'tippy.js';
+
 import 'tippy.js/dist/tippy.css';
 import Tippy from "@tippyjs/react";
 const Book = ({ book }) => {
-  const { _id, image, tourists_spot_name, totalVisitorsPerYear, location, seasonality, country_Name ,short_description} = book;
+  const { _id, image, tourists_spot_name, totalVisitorsPerYear, location, seasonality, country_Name } = book;
   // console.log(_id);
   return (
     <div data-aos="fade-down"
@@ -23,6 +23,7 @@ const Book = ({ book }) => {
             <p> seasonality: {seasonality}</p>
             <div>
 
+            <Tippy content="i am redy to swo daitals">
               <Link to={`/book/${_id}`} className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-gray-50">
                 <span className="absolute left-0 block w-full h-0 transition-all bg-indigo-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
                 <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
@@ -30,12 +31,8 @@ const Book = ({ book }) => {
                 </span>
                 <span className="relative">View Details</span>
               </Link>
-              <div >
-                <Tippy content="i am tooltip">
-             <button className="btn btn-circle"
-             >click me</button>
              </Tippy>
-              </div>
+             
             </div>
           </div>
         </div>
