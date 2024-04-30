@@ -69,7 +69,7 @@ const Raots = createBrowserRouter([
             },
             {
                 path: '/Hoome',
-                loader: () => fetch('http://localhost:5000/user'),
+                loader: () => fetch('https://my-coffee-shope-server.vercel.app/user'),
                 element: <Hoome></Hoome>
             },
             {

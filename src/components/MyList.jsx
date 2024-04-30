@@ -9,7 +9,7 @@ const MyList = () => {
     const [control, setcontrol] = useState(false);
     // console.log(user);
     useEffect(() => {
-        fetch(`http://localhost:5000/sport/${user?.email}`)
+        fetch(`https://my-coffee-shope-server.vercel.app/sport/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setitem(data);
