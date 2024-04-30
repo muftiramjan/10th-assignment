@@ -9,10 +9,9 @@ Currently, two official plugins are available:
 <!-- weabsait name -->
 Exotic Escapes
 
-<!-- live Link
+ 
 live link: 
-- [@firebase-link](https://nine-assainmant.web.app/)
-
+[@firebase-link](https://tenassaimant.web.app/)
 <!-- home page -->
 1.  add  navbar in navbar six rots
 2. Added four Routs  of the navbars ,
