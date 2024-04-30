@@ -18,63 +18,64 @@ import AllAdededSpot from "../Paigase/Hoome/AllAdededSpot";
 
 
 
-const Raots= createBrowserRouter([
+
+const Raots = createBrowserRouter([
     {
-        path:'/',
-        element:<Root></Root>,
+        path: '/',
+        element: <Root></Root>,
         errorElement: <Error></Error>,
-        children:[
+        children: [
             {
-                path:'/',
-                element:<Hoome></Hoome>
+                path: '/',
+                element: <Hoome></Hoome>
             },
             {
-                path:'/UpdateProfile',
-                element:<UpdateProfile></UpdateProfile>
+                path: '/UpdateProfile',
+                element: <UpdateProfile></UpdateProfile>
             },
             {
-                path:'/MyList',
-                element:<MyList></MyList>
+                path: '/MyList',
+                element: <MyList></MyList>
             },
             {
-                path:'/EditProfile',
-                element:<EditProfile></EditProfile>
+                path: '/EditProfile',
+                element: <EditProfile></EditProfile>
             },
             {
-                path:'/TouristsSpotForm',
-                element:<TouristsSpotForm></TouristsSpotForm>,
-                loader: ()=> fetch('http://localhost:5000/sport')
+                path: '/TouristsSpotForm',
+                element: <TouristsSpotForm></TouristsSpotForm>,
+                loader: () => fetch('http://localhost:5000/sport')
             },
             {
-                path:'/CurdDitels',
-                element:<CurdDitels></CurdDitels>
-               
+                path: '/CurdDitels/:id',
+                element: <CurdDitels></CurdDitels>
+
             },
             {
-                path:'/AllAdededSpot',
-                element:<Praivhetrout><AllAdededSpot></AllAdededSpot></Praivhetrout>,
+                path: '/AllAdededSpot',
+                element: <Praivhetrout><AllAdededSpot></AllAdededSpot></Praivhetrout>,
             },
             {
-                path:'/login',
-                element:<LoginFrom></LoginFrom>
+                path: '/login',
+                element: <LoginFrom></LoginFrom>
             },
             {
-                path:'/Register',
-                element:<Register></Register>
+                path: '/Register',
+                element: <Register></Register>
             },
             {
-                path:'/LoginFrom',
-                element:<LoginFrom></LoginFrom>
+                path: '/LoginFrom',
+                element: <LoginFrom></LoginFrom>
             },
             {
-                path:'/Hoome',
-                loader: ()=> fetch('http://localhost:5000/user'),
-                element:<Hoome></Hoome>
+                path: '/Hoome',
+                loader: () => fetch('http://localhost:5000/user'),
+                element: <Hoome></Hoome>
             },
             {
-                path:'/book/:id',
+                path: '/book/:id',
                 element: <Praivhetrout><Ditaels></Ditaels> </Praivhetrout>,
-              }
+            }
         ]
     }
 ]);

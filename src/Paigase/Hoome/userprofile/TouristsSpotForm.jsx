@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import AddToristSpotFrom from "../../../components/AddToristSpotFrom";
 import { useLoaderData } from "react-router-dom";
 import SpotsCurds from "./SpotsCurds";
 
