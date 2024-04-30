@@ -3,8 +3,10 @@ import { AoutContext } from "../../../components/AuothProvider/Auothprovhider";
 import { Helmet } from "react-helmet-async";
 import { FaRegEdit } from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
-import { Auth } from "../../../firbes/firbes.config";
+
 import { toast } from "react-toastify";
+import Auth from "../../../../firebase/firebase.init";
+
 
 
 const UpdateProfile = () => {

@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { createContext } from "react";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, GithubAuthProvider, FacebookAuthProvider, onAuthStateChanged, signOut, updateProfile } from "firebase/auth";
-import { Auth } from "../../firbes/firbes.config";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, GithubAuthProvider, FacebookAuthProvider, onAuthStateChanged, signOut, updateProfile } from "firebase/auth"
+
 import { useEffect } from "react";
 import PropTypes from 'prop-types'
+import Auth from "../../../firebase/firebase.init";
+
 
 
 

@@ -5,7 +5,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { NavLink } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
-import { Auth } from "../firbes/firbes.config";
+import Auth from "../../firebase/firebase.init";
+
 
 const Register = () => {
     const { Registeruser } = useContext(AoutContext)

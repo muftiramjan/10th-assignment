@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
-
-
 const CurdDitels = () => {
     const {id} =useParams();
     console.log(id);
@@ -20,9 +18,6 @@ const CurdDitels = () => {
         const seasonality = form.seasonality.value;
         const travel_time = form.travel_time.value;
         const totaVisitorsPerYear = form.totaVisitorsPerYear.value;
-     
-        
-
         const newSport = { useimageURL, tourists_spot_name, country_Name, location, shortdescription, average_cost, seasonality, travel_time,totaVisitorsPerYear};
         console.log(newSport);
 
