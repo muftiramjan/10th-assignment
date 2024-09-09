@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { AoutContext } from "./AuothProvider/Auothprovhider";
+import { AoutContext } from "./AuothProvider/AuothProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { NavLink } from "react-router-dom";

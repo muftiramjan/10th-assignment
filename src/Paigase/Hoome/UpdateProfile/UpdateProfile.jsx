@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { AoutContext } from "../../../components/AuothProvider/Auothprovhider";
+import { AoutContext } from "../../../components/AuothProvider/AuothProvider";
 import { Helmet } from "react-helmet-async";
 import { FaRegEdit } from "react-icons/fa";
 import { updateProfile } from "firebase/auth";

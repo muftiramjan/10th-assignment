@@ -43,7 +43,7 @@ const CurdDitels = () => {
 
     }
     useEffect( () => {
-        fetch(`https://my-coffee-shope-server.vercel.app/Singelspot/${id}`)
+        fetch(`http://localhost:5000/Singelspot/${id}`)
         .then (res => res.json())
         .then(data => {
             setSpots(data)
@@ -105,7 +105,7 @@ const CurdDitels = () => {
                 </div>
               
                 <button className="btn btn-block bg-black text-white">updete</button>
-              <NavLink to="/MyList" className="btn btn-block bg-black text-white">Bok to my list</NavLink>
+              <NavLink to="/MyList" className="btn btn-block bg-black text-white">Back to my list</NavLink>
             </form>
         </div>
 

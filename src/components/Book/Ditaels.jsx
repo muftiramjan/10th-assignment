@@ -1,49 +1,56 @@
-import { useEffect, useState } from "react";
-import { Link,  useParams } from "react-router-dom";
-
-
+import { NavLink, useLoaderData } from "react-router-dom";
+import { FaArrowCircleRight } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 const Ditaels = () => {
-    const [singleCart, setSingleCart] = useState([])
-
-    const { id } = useParams();
-
-    useEffect(() => {
-        fetch(`https://my-coffee-shope-server.vercel.app/singleUser/${id}`)
-            .then(res => res.json())
-            .then(dt => setSingleCart(dt))
-    }, [id])
-
-
-
+    const spots = useLoaderData();
     return (
-        <div>
-            <div className="hero min-h-[400] bg-base-200">
-                <div className="hero-content flex-col lg:flex-row">
-                    <img src={singleCart.image} className="max-w-2xl p-5  rounded-lg shadow-2xl" />
-                    <div className="space-y-5">
-                        <h1 className="text-5xl font-bold">{singleCart.tourists_spot_name}</h1>
-                        <p>country_Name: {singleCart.country_Name}</p>
-                        <p>location: {singleCart.location}</p>
-                        <p>average_cost: {singleCart.average_cost}</p>
-                        <p>seasonality: {singleCart.seasonality}</p>
-                        <p>travel_time: {singleCart.travel_time}</p>
-                        <p>totalVisitorsPerYear: {singleCart.totalVisitorsPerYear}</p>
-                        <p>userEmail: {singleCart.userEmail}</p>
-                        <p>userName: {singleCart.userName}</p>
-
-
-                    </div>
-                </div>
+        <div className="relative w-full mx-auto">
+            <div>
+                <img src={spots.image} alt={spots.tourists_spot_name} className="w-full lg:h-[500px] object-cover rounded-lg shadow-md" />
             </div>
-          
-            <p className="font-bold text-neutral-700 text-2xl"> <span className="font-bold text-3xl text-indigo-600">description:</span>  {singleCart.description}</p>
-            <Link to="/Hoome" className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-gray-50 mb-10 mt-8">
-                <span className="absolute left-0 block w-full h-0 transition-all bg-indigo-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
-                <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </span>
-                <span className="relative">Back To HoMe</span>
-            </Link>
+            <div className="mt-10 p-6 bg-white bg-opacity-90 rounded-lg shadow-lg mx-auto w-11/12 md:w-3/4 lg:w-6/8">
+            <div className="flex items-center">
+            <FaLocationDot />
+                <h3 className="text-black text-lg font-bold ml-3">{spots.country_Name}</h3>
+            </div>
+            <div className="flex items-center">
+            <FaArrowCircleRight />
+                <h3 className="text-black text-lg font-bold ml-3">{spots.tourists_spot_name}</h3>
+            </div>
+            <div className="flex items-center">
+            <FaArrowCircleRight />
+                <h3 className="text-black text-lg font-bold ml-3">{spots.average_cost}</h3>
+            </div>
+            <div className="flex items-center">
+            <FaArrowCircleRight />
+                <h3 className="text-black text-lg font-bold ml-3"> {spots.totalVisitorsPerYear}</h3>
+            </div>
+            <div className="flex items-center">
+            <FaArrowCircleRight />
+                <h3 className="text-black text-lg font-bold ml-3">{spots.seasonality}</h3>
+            </div>
+            <div className="flex items-center">
+            <FaArrowCircleRight />
+                <h3 className="text-black text-lg font-bold ml-3">{spots.travel_time}</h3>
+            </div>
+            <div className="flex items-center">
+            <FaArrowCircleRight />
+                <h3 className="text-black text-lg font-bold ml-3">{spots.description}</h3>
+            </div>
+            <div className="flex items-center">
+           <FaArrowCircleRight />
+                <h3 className="text-black text-lg font-bold ml-3">{spots.country_Name}</h3>
+            </div>
+                <NavLink to='/AllAdededSpot'>
+                    <button className="text-xl text-white relative px-5 py-2 font-semibold group">
+                        <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-[18deg] bg-[#188d18] group-hover:bg-[#32CC32] group-hover:skew-x-[18deg]"></span>
+                        <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-[18deg] bg-[#32CC32] group-hover:bg-[#188d18] group-hover:-skew-x-[18deg]"></span>
+                        <span className="flex items-center justify-center gap-2 relative">
+                            <span>Get Started</span>
+                        </span>
+                    </button> </NavLink>
+            </div>
+
         </div>
     );
 };

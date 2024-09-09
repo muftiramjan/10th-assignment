@@ -1,0 +1,87 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/9cSwxzK/istockphoto-1223269800-1024x1024.jpg",
+      "tourists_spot_name": "Sundarbans",
+      "country_Name": "Bangladesh",
+      "location": "Khulna Division",
+      "description": "The Sundarbans, a UNESCO World Heritage Site, is the largest mangrove forest in the world. Home to the Bengal tiger, it boasts diverse flora and fauna. Explore its winding rivers, dense forests, and unique ecosystems while spotting crocodiles, deer, and exotic birds.",
+      "average_cost": "Varies based on tour packages",
+      "seasonality": "Best visited from November to March",
+      "travel_time": "3-4 days",
+      "totalVisitorsPerYear": 100000,
+      "userEmail": "user1@example.com",
+      "userName": "User 1"
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/tL1q413/pexels-m-shahin7255-286672485-25288251.jpg",
+      "tourists_spot_name": "Cox’s Bazar",
+      "country_Name": "Bangladesh",
+      "location": "Chittagong Division",
+      "description": "Cox’s Bazar is famed for having the longest natural sea beach in the world. Its golden sands stretch for over 120 kilometers along the Bay of Bengal. Enjoy swimming, surfing, and beachside relaxation, or visit nearby attractions like Himchari National Park.",
+      "average_cost": "Varies based on accommodation",
+      "seasonality": "Best visited from October to March",
+      "travel_time": "2-3 days",
+      "totalVisitorsPerYear": 500000,
+      "userEmail": "user2@example.com",
+      "userName": "User 2"
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/MktPJBz/7.jpg",
+      "tourists_spot_name": "Rangamati",
+      "country_Name": "Bangladesh",
+      "location": "Chittagong Hill Tracts",
+      "description": "Rangamati is a picturesque hill district surrounded by lush greenery and serene lakes. Explore its tribal culture, take boat rides on Kaptai Lake, and visit attractions like the Tribal Cultural Institute and Rajbon Bihar Buddhist monastery.",
+      "average_cost": "Varies based on accommodation",
+      "seasonality": "Best visited from September to March",
+      "travel_time": "2-3 days",
+      "totalVisitorsPerYear": 200000,
+      "userEmail": "user3@example.com",
+      "userName": "User 3"
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/gg4z6Xq/1650ab9c-ca94-41d6-9844-e8ae1c8d70af.jpg",
+      "tourists_spot_name": "Bandarban",
+      "country_Name": "Bangladesh",
+      "location": "Chittagong Hill Tracts",
+      "description": "Bandarban is known for its stunning hill landscapes, indigenous culture, and adventure activities. Trek through its verdant hills, visit tribal villages, and explore attractions like Nilgiri, Boga Lake, and the Buddha Dhatu Jadi (Golden Temple).",
+      "average_cost": "Varies based on accommodation and activities",
+      "seasonality": "Best visited from November to March",
+      "travel_time": "2-3 days",
+      "totalVisitorsPerYear": 150000,
+      "userEmail": "user4@example.com",
+      "userName": "User 4"
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/HN7Lb29/39f42af1-1ea8-4604-865e-4dd5b3536a47.jpg",
+      "tourists_spot_name": "Saint Martin’s Island",
+      "country_Name": "Bangladesh",
+      "location": "Bay of Bengal",
+      "description": "Saint Martin’s Island is a tranquil paradise with pristine beaches and crystal-clear waters. Relax on its sandy shores, go snorkeling or scuba diving to explore colorful coral reefs, and enjoy fresh seafood delicacies by the sea.",
+      "average_cost": "Varies based on accommodation and activities",
+      "seasonality": "Best visited from October to April",
+      "travel_time": "2-3 days",
+      "totalVisitorsPerYear": 100000,
+      "userEmail": "user5@example.com",
+      "userName": "User 5"
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/CWn0SFf/8.jpg",
+      "tourists_spot_name": " A Land of Diversity",
+      "country_Name": "Bangladesh",
+      "location": "Various",
+      "description": "Bangladesh offers a plethora of tourist attractions, from lush mangrove forests and pristine beaches to picturesque hill districts and vibrant cities. Explore its rich cultural heritage, diverse landscapes, and warm hospitality for an unforgettable travel experience.",
+      "average_cost": "Varies based on destinations and activities",
+      "seasonality": "Varies based on destinations",
+      "travel_time": "Varies based on destinations",
+      "totalVisitorsPerYear": 2000000,
+      "userEmail": "user6@example.com",
+      "userName": "User 6"
+    }
+  ]
+  
