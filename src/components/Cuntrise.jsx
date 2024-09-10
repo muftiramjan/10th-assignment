@@ -5,7 +5,7 @@ const Cuntrise = () => {
     const [cuntris, setCuntri] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/cuntrise')
+        fetch('https://ten-assaiment-server.vercel.app/cuntrise')
             .then(res => res.json())
             .then(data => {
                 setCuntri(data);

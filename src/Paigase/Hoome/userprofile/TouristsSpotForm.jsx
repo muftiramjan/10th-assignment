@@ -21,7 +21,7 @@ const TouristsSpotForm = () => {
   return (
     <div>
       <Helmet>
-        <title>All tourest Spots</title>
+        <title>All tourist Spots</title>
       </Helmet>
       <div className="my-6 bg-slate-200 p-3">
         <h2 className="text-center font-bold text-2xl text-slate-950">ALL TOURIST SPOTS</h2>

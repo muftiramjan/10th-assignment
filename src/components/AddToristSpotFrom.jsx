@@ -25,7 +25,7 @@ const AddTouristSpotForm = () => {
     const newSpot = { useimageURL, tourists_spot_name, country_Name, location, shortdescription, average_cost, seasonality, travel_time, totaVisitorsPerYear, UserEmail, UserName };
     console.log(newSpot);
 
-    fetch('http://localhost:5000/sport', {
+    fetch('https://ten-assaiment-server.vercel.app/sport', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const AddTouristSpotForm = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.insertedId) {
           Swal.fire({
             title: 'Success!',

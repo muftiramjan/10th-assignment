@@ -11,7 +11,7 @@ const Spot = ({ book }) => {
     <div data-aos="fade-down"
       data-aos-easing="linear"
       data-aos-duration="1000">
-      <div className="card  shadow-2xl p-3">
+      <div className="card  shadow-2xl p-3 bg-green-100 mt-5">
         <img className="h-80 w-full object-cover p-4 rounded" src={image} />
         <div className="space-x-6 p-2">
           <p className="font-bold text-2xl flex justify-center">{tourists_spot_name}</p>
@@ -35,7 +35,7 @@ const Spot = ({ book }) => {
                     <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-[18deg] bg-[#188d18] group-hover:bg-[#32CC32] group-hover:skew-x-[18deg]"></span>
                     <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-[18deg] bg-[#32CC32] group-hover:bg-[#188d18] group-hover:-skew-x-[18deg]"></span>
                     <span className="flex items-center justify-center gap-2 relative">
-                        <span>View Ditails</span>
+                        <span>View Details</span>
                     </span>
                 </button> </NavLink>
               

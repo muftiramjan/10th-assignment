@@ -32,12 +32,12 @@ const Routes = createBrowserRouter([
             {
                 path: '/TouristsSpotForm',
                 element: <TouristsSpotForm />,
-                loader: () => fetch('http://localhost:5000/sport')
+                loader: () => fetch('https://ten-assaiment-server.vercel.app/sport')
             },
             {
                 path: '/TouristsSpotForm/:id',
                 element: <Ditails2 />,
-                loader: ({ params }) => fetch(`http://localhost:5000/singleSport/${params.id}`)
+                loader: ({ params }) => fetch(`https://ten-assaiment-server.vercel.app/singleSport/${params.id}`)
             },
             {
                 path: '/CurdDitels/:id',
@@ -61,13 +61,13 @@ const Routes = createBrowserRouter([
             },
             {
                 path: '/Hoome',
-                loader: () => fetch('http://localhost:5000/user'),
+                loader: () => fetch('https://ten-assaiment-server.vercel.app/user'),
                 element: <Hoome />
             },
             {
                 path: '/book/:id',
                 element: <Praivhetrout><Ditaels /></Praivhetrout>,
-                loader: ({ params }) => fetch(`http://localhost:5000/sport2/${params.id}`)
+                loader: ({ params }) => fetch(`https://ten-assaiment-server.vercel.app/sport2/${params.id}`)
             },
             {
                 path: '/cuntrise',
@@ -76,7 +76,7 @@ const Routes = createBrowserRouter([
             {
                 path: '/cuntrises/:countryName',
                 element: <SpeceficCountry />,
-                loader: () => fetch('http://localhost:5000/cuntrises')
+                loader: () => fetch('https://ten-assaiment-server.vercel.app/cuntrises')
             },
         ]
     }

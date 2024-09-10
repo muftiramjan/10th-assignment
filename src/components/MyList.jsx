@@ -11,7 +11,7 @@ const MyList = () => {
         const fetchItems = async () => {
             if (user?.email) {
                 try {
-                    const response = await fetch(`http://localhost:5000/sportByEmail/${user.email}`);
+                    const response = await fetch(`https://ten-assaiment-server.vercel.app/sportByEmail/${user.email}`);
                     const data = await response.json();
                     setItems(data);
                 } catch (error) {
@@ -35,7 +35,7 @@ const MyList = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
-                    const response = await fetch(`http://localhost:5000/delete/${id}`, {
+                    const response = await fetch(`https://ten-assaiment-server.vercel.app/delete/${id}`, {
                         method: "DELETE",
                     });
                     const data = await response.json();

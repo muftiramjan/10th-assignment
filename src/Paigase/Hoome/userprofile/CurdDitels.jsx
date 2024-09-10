@@ -21,7 +21,7 @@ const CurdDitels = () => {
         const newSport = { useimageURL, tourists_spot_name, country_Name, location, shortdescription, average_cost, seasonality, travel_time,totaVisitorsPerYear};
         console.log(newSport);
 
-        fetch(`http://localhost:5000/updateSpot/${id}`, {
+        fetch(`https://ten-assaiment-server.vercel.app/updateSpot/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ const CurdDitels = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            // console.log(data);
             if (data.matchedCount) {
                 Swal.fire({
                     title: 'success!',
@@ -43,11 +43,11 @@ const CurdDitels = () => {
 
     }
     useEffect( () => {
-        fetch(`http://localhost:5000/Singelspot/${id}`)
+        fetch(`https://ten-assaiment-server.vercel.app/Singelspot/${id}`)
         .then (res => res.json())
         .then(data => {
             setSpots(data)
-            console.log(data)
+            // console.log(data)
         })
     },[id])
     return (
