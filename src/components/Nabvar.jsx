@@ -5,14 +5,13 @@ import { PuffLoader } from 'react-spinners';
 const Navbar = () => {
   const { user, logOut } = useContext(AoutContext);
 
-
   const [theme, setTheme] = useState('light');
   useEffect(() => {
     localStorage.setItem('theme', theme)
     const localTheme = localStorage.getItem('theme')
     document.querySelector('html').setAttribute('data-theme', localTheme)
-
   }, [theme])
+
   const handeletoggle = (e) => {
     if (e.target.checked) {
       setTheme('synthwave')
@@ -20,6 +19,7 @@ const Navbar = () => {
       setTheme('light')
     }
   }
+  console.log(theme);
   return (
     <div className="navbar bg-red-50 p-3 ">
       <div className="navbar-start">
@@ -59,7 +59,7 @@ const Navbar = () => {
 
           </ul>
         </div>
-        <img className='lg:h-14' src="/Logo.png" alt="" />
+        <img className="h-8 sm:h-10 md:h-12 lg:h-14" src="/Logo.png" alt="" />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

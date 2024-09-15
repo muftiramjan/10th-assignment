@@ -12,8 +12,8 @@ const SpotsCurds = ({ spot }) => {
         seasonality, travel_time } = spot;
     return (
         <div>
-            <div className="card h-full bg-base-100 shadow-xl my-5 p-5 gap-y-2">
-            <img src={useimageURL} alt="" />
+            <div className="card h-full bg-base-100 shadow-xl my-5 p-5 gap-y-2 bg-green-100">
+            <img className='h-80' src={useimageURL} alt="" />
             <div className="card-body">
                 <h2 className="card-title">
                     {name}

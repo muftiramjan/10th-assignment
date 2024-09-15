@@ -13,7 +13,7 @@ export const AoutContext = createContext(null);
 const AuothProvider = ({ children }) => {
     const [user, setuser] = useState(null)
     const [update, setUpdate] = useState(true)
-    const GoogleProvaider = new GoogleAuthProvider()
+    const googleProvider = new GoogleAuthProvider()
     const GithubProvaider = new GithubAuthProvider()
     const FacebookProvaider = new FacebookAuthProvider()
     const [loading, setLoading] = useState(true)
@@ -36,7 +36,7 @@ const AuothProvider = ({ children }) => {
     }
     const GoogleLogin = () => {
         setLoading(true)
-        return signInWithPopup(Auth, GoogleProvaider)
+        return signInWithPopup(Auth, googleProvider)
     }
     const GithubLogin = () => {
         setLoading(true)
@@ -67,8 +67,8 @@ const AuothProvider = ({ children }) => {
     }
     useEffect(() => {
         const unsupscribe = onAuthStateChanged(Auth, (Currenuser) => {
-                setuser(Currenuser)
-                setLoading(false)
+            setuser(Currenuser)
+            setLoading(false)
         });
         return () => {
             unsupscribe()
