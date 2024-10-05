@@ -4,7 +4,7 @@ import 'animate.css';
 
 const ResidentialPara = () => {
     return (
-        <div className='text-center mx-auto mt-12 lg:w-[900px] p-6 bg-gradient-to-r from-green-100 to-green-200 rounded-lg shadow-lg'>
+        <div className='text-center mx-auto mt-12 lg:w-[900px] p-6 bg-gradient-to-r from-green-100 to-green-200 rounded-lg shadow-lg font-[family-name:var(--font-geist-sans)] '>
             <Fade cascade>
                 <h1 className='text-center font-semibold text-4xl text-green-600 mb-4'>
                     Bangladeshs Natural Splendors

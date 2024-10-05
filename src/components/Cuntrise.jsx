@@ -21,7 +21,7 @@ const Cuntrise = () => {
                     <span>Our Countries</span>
                 </span>
             </button>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ">
                 {cuntris.map(cuntri => <Cuntri key={cuntri._id} cuntri={cuntri} />)}
             </div>
         </div>

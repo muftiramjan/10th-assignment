@@ -31,7 +31,7 @@ const TourismPartners = () => {
     };
 
     return (
-        <section>
+        <section className="font-[family-name:var(--font-geist-sans)] ">
             <div className="flex justify-center">
                 <button className="text-3xl mt-6 text-center mb-8 text-white relative px-5 py-2 font-semibold group">
                     <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-[18deg] bg-[#188d18] group-hover:bg-[#32CC32] group-hover:skew-x-[18deg]"></span>

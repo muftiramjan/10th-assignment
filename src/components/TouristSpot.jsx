@@ -5,7 +5,7 @@ const TouristSpot = ({ spot }) => {
     const { tourists_spot_name, location, short_description, average_cost, seasonality } = spot;
 
     return (
-        <div className="card bg-base-100 p-3 gap-y-4 mt-3 shadow-xl">
+        <div className="card bg-base-100 p-3 gap-y-4 mt-3 shadow-xl font-[family-name:var(--font-geist-sans)] ">
             <div className="card-body">
                 <h2 className="card-title">{tourists_spot_name}</h2>
                 <p className='text-left'>Location: {location}</p>

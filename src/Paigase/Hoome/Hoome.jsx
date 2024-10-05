@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async"
 import Spots from "../../components/Book/Spots";
 import TourismPartners from "../../components/TourismPartners";
 import Cuntrise from "../../components/Cuntrise";
+import PaymentForm from "../../components/PaymentForm";
 
 const Hoome = () => {
 
@@ -18,6 +19,7 @@ const Hoome = () => {
             <Spots></Spots>
           <TourismPartners></TourismPartners>
           <Cuntrise></Cuntrise>
+          <PaymentForm></PaymentForm>
         </div>
     );
 };

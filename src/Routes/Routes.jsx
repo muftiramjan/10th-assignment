@@ -13,6 +13,9 @@ import AllAdededSpot from "../Paigase/Hoome/AllAdededSpot";
 import Ditails2 from "../Paigase/Hoome/userprofile/Ditails2";
 import Cuntrise from "../components/Cuntrise";
 import SpeceficCountry from "../components/SpeceficCountry";
+import Success from "../components/Success";
+import Fail from "../components/Fail";
+import Cancel from "../components/Cancel";
 
 
 const Routes = createBrowserRouter([
@@ -24,6 +27,18 @@ const Routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Hoome />
+            },
+            {
+                path: '/success',
+                element: <Success />
+            },
+            {
+                path: '/fail',
+                element: <Fail/>
+            },
+            {
+                path: '/cancel',
+                element: <Cancel />
             },
             {
                 path: '/MyList',
