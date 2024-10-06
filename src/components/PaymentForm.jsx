@@ -44,10 +44,9 @@ const PaymentForm = () => {
       phoneNumber,
     });
 
-    axios
-      .post("https://ten-assaiment-server.vercel.app/createPayment", {
+    axios.post("https://ten-assaiment-server.vercel.app/createPayment", {
         amount: 100,
-        currency: "usdt",
+        currency: "BDT",
       })
       .then((response) => {
         console.log(response);
