@@ -16,6 +16,7 @@ import SpeceficCountry from "../components/SpeceficCountry";
 import Success from "../components/Success";
 import Fail from "../components/Fail";
 import Cancel from "../components/Cancel";
+import PaymentForm from "../components/PaymentForm";
 
 
 const Routes = createBrowserRouter([
@@ -87,6 +88,10 @@ const Routes = createBrowserRouter([
             {
                 path: '/cuntrise',
                 element: <Cuntrise />,
+            },
+            {
+                path: '/payment',
+                element: <PaymentForm></PaymentForm>
             },
             {
                 path: '/cuntrises/:countryName',

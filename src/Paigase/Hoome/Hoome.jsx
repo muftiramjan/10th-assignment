@@ -19,7 +19,9 @@ const Hoome = () => {
             <Spots></Spots>
           <TourismPartners></TourismPartners>
           <Cuntrise></Cuntrise>
+          <div className="mt-36">
           <PaymentForm></PaymentForm>
+          </div>
         </div>
     );
 };

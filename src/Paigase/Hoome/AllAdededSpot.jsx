@@ -9,6 +9,7 @@ const AllAdededSpot = () => {
             <Helmet>
                 <title>AllAdededSpot</title>
             </Helmet>
+            
             <AddToristSpotFrom></AddToristSpotFrom> 
         </div>
     );

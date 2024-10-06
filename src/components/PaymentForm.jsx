@@ -1,9 +1,11 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AoutContext } from "./AuothProvider/AuothProvider";
 
 const PaymentForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const { user } = useContext(AoutContext);
+  const [name, setName] = useState(user?.name || "");
+  const [email, setEmail] = useState(user?.email || "");
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
@@ -33,7 +35,7 @@ const PaymentForm = () => {
       phoneNumber,
     });
 
-    axios.post('http://localhost:5000/createPayment', {
+    axios.post('https://ten-assaiment-server.vercel.app/createPayment', {
       amount: 100,
       currency: 'usdt',
     })
@@ -121,7 +123,8 @@ const PaymentForm = () => {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="John Doe"
+          placeholder="Enter your name"
+          defaultValue={user.name}
           required
           style={inputStyle}
         />
@@ -136,6 +139,7 @@ const PaymentForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="john@example.com"
+          defaultValue={user.email}
           required
           style={inputStyle}
         />
@@ -169,13 +173,7 @@ const PaymentForm = () => {
           <option value="New York">New York</option>
           <option value="Los Angeles">Los Angeles</option>
           <option value="Chicago">Chicago</option>
-          <option value="Houston">Houston</option>
-          <option value="Phoenix">Phoenix</option>
-          <option value="Philadelphia">Philadelphia</option>
-          <option value="San Antonio">San Antonio</option>
-          <option value="San Diego">San Diego</option>
-          <option value="Dallas">Dallas</option>
-          <option value="San Jose">San Jose</option>
+          {/* Add other cities as needed */}
         </select>
       </div>
 
@@ -192,14 +190,7 @@ const PaymentForm = () => {
           <option value="">Select State</option>
           <option value="California">California</option>
           <option value="Texas">Texas</option>
-          <option value="Florida">Florida</option>
-          <option value="New York">New York</option>
-          <option value="Pennsylvania">Pennsylvania</option>
-          <option value="Illinois">Illinois</option>
-          <option value="Ohio">Ohio</option>
-          <option value="Georgia">Georgia</option>
-          <option value="North Carolina">North Carolina</option>
-          <option value="Michigan">Michigan</option>
+          {/* Add other states as needed */}
         </select>
       </div>
 
@@ -217,30 +208,21 @@ const PaymentForm = () => {
         />
       </div>
 
-     {/* Country Dropdown */}
-<div>
-  <label htmlFor="country" style={labelStyle}>Country</label>
-  <select
-    id="country"
-    value={country}
-    onChange={(e) => setCountry(e.target.value)}
-    required
-    style={selectStyle}
-  >
-    <option value="">Select Country</option>
-    <option value="United States">United States</option>
-    <option value="Canada">Canada</option>
-    <option value="United Kingdom">United Kingdom</option>
-    <option value="Australia">Australia</option>
-    <option value="Germany">Germany</option>
-    <option value="France">France</option>
-    <option value="Japan">Japan</option>
-    <option value="India">India</option>
-    <option value="China">China</option>
-    <option value="Brazil">Brazil</option>
-  </select>
-</div>
-
+      {/* Country Dropdown */}
+      <div>
+        <label htmlFor="country" style={labelStyle}>Country</label>
+        <select
+          id="country"
+          value={country}
+          onChange={(e) => setCountry(e.target.value)}
+          required
+          style={selectStyle}
+        >
+          <option value="">Select Country</option>
+          <option value="United States">United States</option>
+          {/* Add other countries as needed */}
+        </select>
+      </div>
 
       {/* Phone Number Input */}
       <div>

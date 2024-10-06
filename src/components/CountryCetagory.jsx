@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import TouristSpot from './TouristSpot';
 
-const CountryCetagory = ({ title, items }) => {
+const  CountryCetagory = ({ title, items }) => {
     return (
         <div>
             <h1>{title}</h1>
