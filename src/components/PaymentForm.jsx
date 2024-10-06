@@ -1,11 +1,12 @@
 import axios from "axios";
-import React, { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { AoutContext } from "./AuothProvider/AuothProvider";
 
 const PaymentForm = () => {
   const { user } = useContext(AoutContext);
-  const [name, setName] = useState(user?.name || "");
-  const [email, setEmail] = useState(user?.email || "");
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
@@ -13,6 +14,14 @@ const PaymentForm = () => {
   const [country, setCountry] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+
+  // Effect to initialize user details when component mounts or user changes
+  useEffect(() => {
+    if (user) {
+      setName(user.name || "");
+      setEmail(user.email || "");
+    }
+  }, [user]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -22,7 +31,7 @@ const PaymentForm = () => {
       return;
     }
 
-    setErrorMessage("");  // Reset the error message if form is valid
+    setErrorMessage(""); // Reset the error message if form is valid
 
     console.log("Form submitted with:", {
       name,
@@ -35,21 +44,22 @@ const PaymentForm = () => {
       phoneNumber,
     });
 
-    axios.post('https://ten-assaiment-server.vercel.app/createPayment', {
-      amount: 100,
-      currency: 'usdt',
-    })
-    .then((response) => {
-      console.log(response);
+    axios
+      .post("https://ten-assaiment-server.vercel.app/createPayment", {
+        amount: 100,
+        currency: "usdt",
+      })
+      .then((response) => {
+        console.log(response);
 
-      const redirectUrl = response.data.paymentUrl;
-      if(redirectUrl){
-        window.location.replace(redirectUrl)
-      }
-    })
-    .catch((error) => {
-      console.error("There was an error processing the payment:", error);
-    });
+        const redirectUrl = response.data.paymentUrl;
+        if (redirectUrl) {
+          window.location.replace(redirectUrl);
+        }
+      })
+      .catch((error) => {
+        console.error("There was an error processing the payment:", error);
+      });
   };
 
   const formStyle = {
@@ -117,14 +127,15 @@ const PaymentForm = () => {
 
       {/* Name Input */}
       <div>
-        <label htmlFor="name" style={labelStyle}>Name</label>
+        <label htmlFor="name" style={labelStyle}>
+          Name
+        </label>
         <input
           id="name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Enter your name"
-          defaultValue={user.name}
           required
           style={inputStyle}
         />
@@ -132,14 +143,15 @@ const PaymentForm = () => {
 
       {/* Email Input */}
       <div>
-        <label htmlFor="email" style={labelStyle}>Email</label>
+        <label htmlFor="email" style={labelStyle}>
+          Email
+        </label>
         <input
           id="email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="john@example.com"
-          defaultValue={user.email}
           required
           style={inputStyle}
         />
@@ -147,7 +159,9 @@ const PaymentForm = () => {
 
       {/* Address Input */}
       <div>
-        <label htmlFor="address" style={labelStyle}>Address</label>
+        <label htmlFor="address" style={labelStyle}>
+          Address
+        </label>
         <input
           id="address"
           type="text"
@@ -161,7 +175,9 @@ const PaymentForm = () => {
 
       {/* City Dropdown */}
       <div>
-        <label htmlFor="city" style={labelStyle}>City</label>
+        <label htmlFor="city" style={labelStyle}>
+          City
+        </label>
         <select
           id="city"
           value={city}
@@ -179,7 +195,9 @@ const PaymentForm = () => {
 
       {/* State Dropdown */}
       <div>
-        <label htmlFor="state" style={labelStyle}>State</label>
+        <label htmlFor="state" style={labelStyle}>
+          State
+        </label>
         <select
           id="state"
           value={state}
@@ -196,7 +214,9 @@ const PaymentForm = () => {
 
       {/* Zip Code Input */}
       <div>
-        <label htmlFor="zip" style={labelStyle}>Zip Code</label>
+        <label htmlFor="zip" style={labelStyle}>
+          Zip Code
+        </label>
         <input
           id="zip"
           type="text"
@@ -210,7 +230,9 @@ const PaymentForm = () => {
 
       {/* Country Dropdown */}
       <div>
-        <label htmlFor="country" style={labelStyle}>Country</label>
+        <label htmlFor="country" style={labelStyle}>
+          Country
+        </label>
         <select
           id="country"
           value={country}
@@ -226,7 +248,9 @@ const PaymentForm = () => {
 
       {/* Phone Number Input */}
       <div>
-        <label htmlFor="phoneNumber" style={labelStyle}>Phone Number</label>
+        <label htmlFor="phoneNumber" style={labelStyle}>
+          Phone Number
+        </label>
         <input
           id="phoneNumber"
           type="tel"
@@ -242,7 +266,9 @@ const PaymentForm = () => {
       {errorMessage && <div style={errorMessageStyle}>{errorMessage}</div>}
 
       {/* Submit Button */}
-      <button type="submit" style={buttonStyle}>Submit Payment</button>
+      <button type="submit" style={buttonStyle}>
+        Submit Payment
+      </button>
     </form>
   );
 };
