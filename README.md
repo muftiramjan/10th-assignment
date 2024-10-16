@@ -6,7 +6,7 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-<!-- weabsait name -->
+<!-- website name -->
 Exotic Escapes
 
  
@@ -14,7 +14,7 @@ live link:
 [@firebase-link](https://tenassaimant.web.app/)
 <!-- home page -->
 1.  add  navbar in navbar six rots
-2. Added four Routs  of the navbars ,
+2. Added four Routs  of the navbar ,
 3. and log in Register button created,
 4. And update profile worked there too,
 5. and private routs are added,
@@ -22,7 +22,7 @@ live link:
  <!-- banner section -->
 7. In the banner section Three swiper Slider added,
 
- 8. Bangladeshs Natural Splendors (opsonal) paragraf adeded
+ 8. Bangladesh Natural Splendors (opsonal) paragraf adeded
 9. Then an optional reading is done,
 10. Home pagase sixs cards storeg in databage
 
